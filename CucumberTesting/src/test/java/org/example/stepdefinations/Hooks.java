@@ -1,26 +1,32 @@
-package stepdefinations;
+package org.example.stepdefinations;
 
 import io.cucumber.java.*;
-import org.example.BaseClass;
-import org.openqa.selenium.WebDriver;
+import org.example.utils.GlobalVariables;
+import org.example.utils.SingletonBrowserClass;
 
-public class Hooks extends BaseClass {
-
-    @Before
-    public void setup(){
-        setupdriver();
+public class Hooks{
 
 
 
+    @BeforeAll
+    public static void beforeall(){
+        //setupdriver();
+        GlobalVariables.driver = SingletonBrowserClass.getInstanceOfSingletonBrowserClass().getDriver();
     }
 
-    @After
-    public void close(){
-        closedriver();
+
+    @AfterAll
+    public static void close(){
+        //closedriver();
+        GlobalVariables.driver.quit();
+        GlobalVariables.driver=null;
+
 
 
     }
 }
+
+
 
 
 
