@@ -1,13 +1,13 @@
 Feature: user login
 
-
+  @justlogin
   Scenario: user is able to login with valid id
 
     Given user enter valid username and password
     And user click the login bottom
     Then user is successfully logged in
 
-
+  @invalidlogin
   Scenario Outline: user is not able to login with invalid id
 
     Given user enter invalid username "<username>" or password "<password>"

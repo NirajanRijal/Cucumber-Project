@@ -31,10 +31,7 @@ public class SingletonBrowserClass {
         }
 
         public static SingletonBrowserClass getInstanceOfSingletonBrowserClass() {
-            if (instanceOfSingletonBrowserClass == null){
-                instanceOfSingletonBrowserClass = new SingletonBrowserClass();
-            }
-
+            instanceOfSingletonBrowserClass= new SingletonBrowserClass();
             return instanceOfSingletonBrowserClass;
         }
 

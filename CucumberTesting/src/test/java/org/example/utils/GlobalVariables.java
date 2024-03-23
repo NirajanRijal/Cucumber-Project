@@ -6,3 +6,4 @@ public class GlobalVariables {
 
     public static WebDriver driver;
 }
+
